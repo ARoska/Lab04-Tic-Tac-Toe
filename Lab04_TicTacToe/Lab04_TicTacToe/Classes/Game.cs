@@ -29,7 +29,13 @@ namespace Lab04_TicTacToe.Classes
         /// <returns>Winner</returns>
         public Player Play()
         {
+            for (int i = 0; i < 9; i++)
+            {
+                Board.DisplayBoard();
+            Console.ReadLine();
+            }
 
+            return null;
 
             //TODO: Complete this method and utilize the rest of the class structure to play the game.
 

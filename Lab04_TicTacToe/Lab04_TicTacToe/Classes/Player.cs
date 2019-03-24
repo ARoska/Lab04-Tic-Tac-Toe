@@ -7,6 +7,7 @@ namespace Lab04_TicTacToe.Classes
     class Player
     {
 		public string Name { get; set; }
+
 		/// <summary>
 		/// P1 is X and P2 will be O
 		/// </summary>
