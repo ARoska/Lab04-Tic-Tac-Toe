@@ -29,21 +29,20 @@ namespace Lab04_TicTacToe.Classes
         /// <returns>Winner</returns>
         public Player Play()
         {
-            
+
             for (int i = 0; i < 9; i++)
             {
                 Console.Clear();
                 Board.DisplayBoard();
-                if (PlayerOne.IsTurn == true)
+                NextPlayer().TakeTurn(Board);
+                if (CheckForWinner(Board))
                 {
-                    PlayerOne.TakeTurn(Board);
-                    PlayerOne.IsTurn = false;
+                    Winner = NextPlayer();
+                    Console.Clear();
+                    Board.DisplayBoard();
+                    return Winner;
                 }
-                else
-                {
-                    PlayerTwo.TakeTurn(Board);
-                    PlayerOne.IsTurn = true;
-                }
+                SwitchPlayer();
             }
             Console.Clear();
             Board.DisplayBoard();
@@ -100,6 +99,11 @@ namespace Lab04_TicTacToe.Classes
                 string a = Board.GameBoard[p1.Row, p1.Column];
                 string b = Board.GameBoard[p2.Row, p2.Column];
                 string c = Board.GameBoard[p3.Row, p3.Column];
+
+                if (a == b && b == c && a == c)
+                {
+                    return true;
+                }
 
                 // TODO:  Determine a winner has been reached. 
                 // return true if a winner has been reached. 

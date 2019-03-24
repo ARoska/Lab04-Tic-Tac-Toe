@@ -34,7 +34,7 @@ namespace Lab04_TicTacToe
             {
                 Name = playerOneInput,
                 Marker = "X",
-                IsTurn = true
+                IsTurn = true,
             };
 
             Player playerTwo = new Player
