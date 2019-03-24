@@ -29,11 +29,24 @@ namespace Lab04_TicTacToe.Classes
         /// <returns>Winner</returns>
         public Player Play()
         {
+            
             for (int i = 0; i < 9; i++)
             {
+                Console.Clear();
                 Board.DisplayBoard();
-            Console.ReadLine();
+                if (PlayerOne.IsTurn == true)
+                {
+                    PlayerOne.TakeTurn(Board);
+                    PlayerOne.IsTurn = false;
+                }
+                else
+                {
+                    PlayerTwo.TakeTurn(Board);
+                    PlayerOne.IsTurn = true;
+                }
             }
+            Console.Clear();
+            Board.DisplayBoard();
 
             return null;
 
