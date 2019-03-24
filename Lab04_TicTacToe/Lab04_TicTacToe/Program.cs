@@ -51,15 +51,15 @@ namespace Lab04_TicTacToe
             if (winner != null)
             {
                 Console.WriteLine($"{winner.Name} wins!\n" +
-                "\n" +
-                "Enter \"yes\" to play again or \"no\" to exit.");
+                    "\n" +
+                    "If you would like to play again enter \"yes\".");
                 playAgainInput = Console.ReadLine();
             }
             else
             {
                 Console.WriteLine("It's a draw...\n" +
                     "\n" +
-                    "Enter \"yes\" to play again or \"no\" to exit.");
+                    "If you would like to play again enter \"yes\".");
                 playAgainInput = Console.ReadLine();
 
             }
@@ -73,10 +73,6 @@ namespace Lab04_TicTacToe
                 return false;
             }
         }
-
-        // TODO: Setup your game here. Create an introduction. 
-        // Create your players, and instantiate your Game class. 
-        // output to the console the winner
     }
 }
 
