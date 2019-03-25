@@ -28,11 +28,16 @@ Then select and open ```Lab04_TicTacToe.sln```
 ## Visuals
 
 ##### Application Start
-![Image 1](https://via.placeholder.com/750x500)
-##### Using the Application
-![Image 1](https://via.placeholder.com/750x500)
-##### Application End
-![Image 1](https://via.placeholder.com/750x500)
+![Application Start](https://github.com/Roketsu86/Lab04-Tic-Tac-Toe/blob/master/Assets/tic-tac-toe-start.jpg)
+
+##### Playing a Game - Early Game
+![Playing a Game - Early Game](https://github.com/Roketsu86/Lab04-Tic-Tac-Toe/blob/master/Assets/tic-tac-toe-begin-game.jpg)
+
+##### Playing a Game - Late Game
+![Playing a Game - Late Game](https://github.com/Roketsu86/Lab04-Tic-Tac-Toe/blob/master/Assets/tic-tac-toe-late-game.jpg)
+
+##### Winner!
+![Winner!](https://github.com/Roketsu86/Lab04-Tic-Tac-Toe/blob/master/Assets/tic-tac-toe-winner.jpg)
 
 ------------------------------
 

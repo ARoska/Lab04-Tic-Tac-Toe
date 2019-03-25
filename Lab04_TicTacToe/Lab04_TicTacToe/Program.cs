@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab04_TicTacToe.Classes;
+using System;
 
 namespace Lab04_TicTacToe
 {
@@ -6,15 +7,72 @@ namespace Lab04_TicTacToe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            PlayGame();
+            bool play = true;
+            while (play == true)
+            {
+                play = PlayGame();
+                Console.Clear();
+            }
+            Console.WriteLine("Bye!  Thanks for playing!");
+            System.Threading.Thread.Sleep(1500);
         }
 
-        static void PlayGame()
+        static bool PlayGame()
         {
-            // TODO: Setup your game here. Create an introduction. 
-            // Create your players, and instantiate your Game class. 
-            // output to the console the winner
+            string playAgainInput = "";
+
+            Console.Write("Welcome to Tic-Tac-Toe!\n" +
+                "\n" +
+                "Please enter Player 1's name: ");
+            string playerOneInput = Console.ReadLine();
+
+            Console.Write("\n" +
+                "Please enter Player 2's name: ");
+            string playerTwoInput = Console.ReadLine();
+
+            Player playerOne = new Player
+            {
+                Name = playerOneInput,
+                Marker = "X",
+                IsTurn = true,
+            };
+
+            Player playerTwo = new Player
+            {
+                Name = playerTwoInput,
+                Marker = "O",
+                IsTurn = false
+            };
+
+            Game game = new Game(playerOne, playerTwo);
+
+            Player winner = game.Play();
+
+            if (winner != null)
+            {
+                Console.WriteLine($"{winner.Name} wins!\n" +
+                    "\n" +
+                    "If you would like to play again enter \"yes\".");
+                playAgainInput = Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("It's a draw...\n" +
+                    "\n" +
+                    "If you would like to play again enter \"yes\".");
+                playAgainInput = Console.ReadLine();
+
+            }
+
+            if (playAgainInput.ToLower() == "y" || playAgainInput.ToLower() == "yes")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
+
