@@ -24,7 +24,7 @@ namespace Lab04_TicTacToe.Classes
             Position desiredCoordinate = null;
             while (desiredCoordinate is null)
             {
-                Console.WriteLine("Please select a location");
+                Console.WriteLine("Please select a location:");
                 Int32.TryParse(Console.ReadLine(), out int position);
                 desiredCoordinate = PositionForNumber(position);
             }
@@ -56,7 +56,7 @@ namespace Lab04_TicTacToe.Classes
         {
             bool isTurn = true;
 
-            Console.WriteLine($"{Name} it is your turn");
+            Console.WriteLine($"{Name}, you are {Marker} and it is your turn.");
             while (isTurn)
             {
                 Position position = GetPosition(board);
