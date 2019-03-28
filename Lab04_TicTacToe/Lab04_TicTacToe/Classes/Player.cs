@@ -6,6 +6,9 @@ namespace Lab04_TicTacToe.Classes
 {
     public class Player
     {
+        /// <summary>
+        /// Player's chosen name
+        /// </summary>
         public string Name { get; set; }
 
         /// <summary>
@@ -18,7 +21,11 @@ namespace Lab04_TicTacToe.Classes
         /// </summary>
         public bool IsTurn { get; set; }
 
-
+        /// <summary>
+        /// Prompts the user for their move and then retruns the co-ordinates of that choice.
+        /// </summary>
+        /// <param name="board">Current board state.</param>
+        /// <returns>Co-ordinates of the user's move.</returns>
         public Position GetPosition(Board board)
         {
             Position desiredCoordinate = null;
@@ -32,7 +39,11 @@ namespace Lab04_TicTacToe.Classes
 
         }
 
-
+        /// <summary>
+        /// Determinse the co-ordinates of a requested move.
+        /// </summary>
+        /// <param name="position">Number representing the usre's desired move.</param>
+        /// <returns>Actual co-ordinates of the board space the user requested.</returns>
         public static Position PositionForNumber(int position)
         {
             switch (position)
@@ -51,7 +62,10 @@ namespace Lab04_TicTacToe.Classes
             }
         }
 
-
+        /// <summary>
+        /// Method used to initiate and follow through on a player's turn.
+        /// </summary>
+        /// <param name="board">Current board state.</param>
         public void TakeTurn(Board board)
         {
             bool isTurn = true;
